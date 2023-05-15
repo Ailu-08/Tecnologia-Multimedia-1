@@ -191,7 +191,7 @@ void draw() {
       texto2=216;
     }
 
-    if (elcontador>200) {
+    if (elcontador>50) {
       logicaestado="estadodos";
     }
   } else if (logicaestado=="estadodos") {
