@@ -428,7 +428,7 @@ void mousePressed() {
       tiempotexto2= 0;
       Movimtext=0;
       Movimtext2=0;
-      Movimtext3=0;
+      Movimtext3=240;
       rectMode(CORNER);
       texto2=0;
     }
