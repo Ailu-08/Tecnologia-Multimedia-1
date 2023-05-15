@@ -1,3 +1,9 @@
+//tp1
+//tp1:Gatos
+//Legajo(94717/7)
+//Ailu Avanzini
+//Prof Matias Jauregui Lorda
+
 //Declaracion de variables
 float elcontador;
 float suma;
