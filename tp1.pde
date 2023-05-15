@@ -1,5 +1,4 @@
 //Declaracion de variables
-boolean cambiocolor;
 float elcontador;
 float suma;
 //Color Ramdom
