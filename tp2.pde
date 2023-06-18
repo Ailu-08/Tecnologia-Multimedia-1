@@ -1,4 +1,5 @@
-//Student: Ailen Avanzini //TP2 Comision 2 //Profesor: Matias Jauregui Lorda //Legajo: 94717/7
+//Student: Ailen Avanzini //TP2 Comision 2 //Professor: Matias Jauregui Lorda //Docket: 94717/7
+//Link Video Tutorial:
 int m;
 int c1;
 int c2;
