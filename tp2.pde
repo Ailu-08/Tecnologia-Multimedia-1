@@ -1,5 +1,5 @@
-//Student: Ailen Avanzini //TP2 Comision 2 //Professor: Matias Jauregui Lorda //Docket: 94717/7
-//Link Video Tutorial:
+//Student: Ailu Avanzini //TP2: Coin Optical Illusion //Tecno Multimedia 1 //Comision 2 // Professor: Matias Jauregui Lorda
+//Link Video Tutorial Youtube: https://www.youtube.com/watch?v=aWS2cCt4sLA&feature=youtu.be 
 int m;
 int c1;
 int c2;
@@ -64,7 +64,7 @@ void draw() {
       rectDegradez(rectX, rectY, 54, 39, color(c2), color(c1));
     }
   }
-  
+
   // Calculate elapsed seconds
   elapsedSeconds = floor((millis() - startTime) / 1000);
   println("Elapsed seconds:", elapsedSeconds);
@@ -105,13 +105,14 @@ void mouseClicked() {
   // Mouse in button area
   if (mouseX >= 350 && mouseX <= 450 && mouseY >= 360 && mouseY <= 390) {
     // Reset variables
-    crecer = 0;
+    crecer = random(TWO_PI); // Change rotation
     changeColors = false;
-    c1 = originalC1; // Reset color variable
-    c2 = originalC2; // Reset color variable
     duration = originalDuration; // Reset duration variable
     elapsedSeconds = 0; // Reset elapsed seconds
     startTime = millis(); // Reset start time
+  } else {
+    // Change rotation
+    crecer = random(TWO_PI);
   }
 }
 
