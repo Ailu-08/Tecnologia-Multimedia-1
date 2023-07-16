@@ -1,5 +1,5 @@
 // Alumna: Ailen Avanzini // Legajo: 94717/7 // Materia: Tecno Multimedia 1 // TP3 // Profesor: Matias Jauregui Lorda // FDA // UNLP
-//Link Tutorial: 
+//Link Tutorial: https://www.youtube.com/watch?v=Mqmj5nXb_pc
 
 // Declaración de variables
 int pantallaActual = -1; // Variable que indica la pantalla actual
@@ -18,23 +18,27 @@ int[][] botones = {
   {4, 12}, // Pantalla 3
   {5}, // Pantalla 4
   {6}, // Pantalla 5
-  {1}, // Pantalla 6 (Final)
+  {1, 0}, // Pantalla 6 (Final)
   {8, 9}, // Pantalla 7
-  {1}, // Pantalla 8 (Final)
+  {1, 0}, // Pantalla 8 (Final)
   {10, 11}, // Pantalla 9
-  {1}, // Pantalla 10 (Final)
+  {1, 0}, // Pantalla 10 (Final)
   {3}, // Pantalla 11
   {13, 14, 15}, // Pantalla 12
-  {1}, // Pantalla 13 (Final)
-  {1}, // Pantalla 14 (Final)
-  {1}, // Pantalla 15 (Final)
+  {1, 0}, // Pantalla 13 (Final)
+  {1, 0}, // Pantalla 14 (Final)
+  {1, 0}, // Pantalla 15 (Final)
   {0} // Pantalla 16 (Créditos)
 };
+
+// Colores iniciales
+color colorTexto = color(255);
+color colorTitulo = color(255);
 
 void setup() {
   size(600, 600);
   pantallaActual = 0; // Establecer la pantalla inicial
-  
+
   // Cargar textos
   cargarTextos(600, 600, 20, 30);
 
@@ -56,7 +60,7 @@ void cargarTextos(int anchoPantalla, int altoPantalla, int tamanoTexto, int espa
     "Pantalla 9: Prisioneros de Guerra",
     "Pantalla 10: Final 3: La Felicidad",
     "Pantalla 11: Regreso al hogar",
-    "P12: Desafios en \n los 9 Circulos del Haberno",
+    "P12: Desafios en \n los 9 Circulos del Averno",
     "P13: Final 4; \n Original Pelicula: Perdon y Redencion",
     "Pantalla 14: Final 5:\n El nuevo Rey del Inframundo",
     "Pantalla 15: Final 6: \n Intercambio",
@@ -66,11 +70,11 @@ void cargarTextos(int anchoPantalla, int altoPantalla, int tamanoTexto, int espa
   textosNarrativos = new String[]{
     "TP3",
     "Dante se encuentra perdido en la vida y dudando sobre su fe. \n *Si desea Continuar el hilo del libro ir a la pantalla 2 \n *Si desea continuar el hilo de la pelicula ir a la pantalla 7",
-    "El Descenso Dante, perdido en un oscuro bosque, se encuentra en una encrucijada. Decide seguir a Virgilio, el poeta romano, quien lo guiará a través de los reinos de ultratumba en un viaje épico. Virgilio se convierte en su mentor y lo lleva al Infierno, el primer destino de su viaje.",
-    "Infierno Dante y Virgilio descienden a través de los nueve círculos del Infierno. En cada círculo, encuentran a almas condenadas que sufren tormentos relacionados con sus pecados. Presencian horrores como el fuego, el hielo, los ríos de sangre y encuentran a personajes históricos y mitológicos, como Ulises y Cleopatra. *Si decide seguir el hilo del Libro ir a pantalla 4 \n *Si decide seguir el hilo de la pelicula ir a pantalla 12",
-    "Purgatorio Dante y Virgilio emergen del Infierno y llegan al Purgatorio, una montaña con siete terrazas. Aquí, las almas se purifican a través de pruebas y sufrimientos relacionados con sus pecados. Cada terraza representa un pecado capital y Dante encuentra a personas arrepentidas a medida que avanza y enfrenta desafios cada vez mas dificiles, se purifica y aprende sobre la importancia del perdón y la penitencia en su camino a la redencion.",
-    "Paraíso Dante asciende a través de los nueve cielos del Paraíso. Cada cielo representa un nivel de felicidad y conocimiento celestial. En cada uno, encuentra a almas santas y recibe enseñanzas sobre la naturaleza divina, la teología y la perfección celestial. Dante es guiado por Beatriz, quien representa el amor divino y le revela la belleza y la armonía del Paraíso.",
-    "Unión Divina En el último cielo, Dante experimenta la visión beatífica y alcanza la unión con Dios. Experimenta la plenitud de la felicidad divina y comprende la perfección y el orden del universo. Su viaje culmina en una experiencia mística y trascendental, donde se funde con el amor y la sabiduría divina.",
+    "Dante, perdido en un oscuro bosque, se encuentra en una encrucijada. Decide seguir a Virgilio, el poeta romano, quien lo guiará a través de los reinos de ultratumba en un viaje épico. Virgilio se convierte en su mentor y lo lleva al Infierno, el primer destino de su viaje.",
+    "Dante y Virgilio descienden a través de los nueve círculos del Infierno. En cada círculo, encuentran a almas condenadas que sufren tormentos relacionados con sus pecados. Presencian horrores como el fuego, el hielo, los ríos de sangre y encuentran a personajes históricos y mitológicos, como Ulises y Cleopatra. \n *Si decide seguir el hilo del Libro ir a pantalla 4 \n *Si decide seguir el hilo de la pelicula ir a pantalla 12",
+    "Dante y Virgilio emergen del Infierno y llegan al Purgatorio, una montaña con siete terrazas. Aquí, las almas se purifican a través de pruebas y sufrimientos relacionados con sus pecados. Cada terraza representa un pecado capital y Dante encuentra a personas arrepentidas a medida que avanza y enfrenta desafios cada vez mas dificiles, se purifica y aprende sobre la importancia del perdón y la penitencia en su camino a la redencion.",
+    "Dante asciende a través de los nueve cielos del Paraíso. Cada cielo representa un nivel de felicidad y conocimiento celestial. En cada uno, encuentra a almas santas y recibe enseñanzas sobre la naturaleza divina, la teología y la perfección celestial. Dante es guiado por Beatriz, quien representa el amor divino y le revela la belleza y la armonía del Paraíso.",
+    "En el último cielo, Dante experimenta la visión beatífica y alcanza la unión con Dios. Experimenta la plenitud de la felicidad divina y comprende la perfección y el orden del universo. Su viaje culmina en una experiencia mística y trascendental, donde se funde con el amor y la sabiduría divina.",
     "Dante Debe ir a la guerra por lo que su esposa Beatriz se queda sola en casa con su padre y: \n *Si decide hacer un pacto con el diablo ir a la pantalla 9 \n *Si decide solo esperarlo ir a la pantalla 8",
     "Al Beatriz no hacer el pacto con el diablo el regreso y el alma de Dante no tienen un seguro por lo que muere en batalla junto con otros cruzados",
     "Dante y su ejercito vencen y capturan presos. A Dante se le da la oportunidad de fornicar con una de las reclusas que tenian como esclava ya que esta pidio complacer a los soldados a cambio de su libertad. Ante esto Dante: \n *Si decide serle fiel a su esposa ir a la pantalla 10 \n *Si decide ser infiel ir a la pantalla 11",
@@ -80,7 +84,7 @@ void cargarTextos(int anchoPantalla, int altoPantalla, int tamanoTexto, int espa
     "Al quedarse el infierno sin su señor se cierra por lo que Dante decide asumir el trono y quedarse a vivir alli con su esposa. ",
     "El Diablo interesado por el alma valiente de Dante propone intercambiar su vida por la de Beatriz para que esta pueda ser liberada al cielo. Dante acepta, el Diablo la libera y la pareja se besa hasta que beatriz desaparece envuelta en la luz de un angel mientras que Dante queda condenado a sufrir en el infierno siendo torturado por el Diablo en el circulo de los traidores por toda la eternidad.",
     "Dante vence al Diablo y sacrifica su vida para salvar a Beatriz lo que resulta en que ambos alcancen la salvacion y encuentren redencion en el mas alla",
-    "Directora/Artista/Programadora/Alumna: Ailen Avanzini Legajo: 94717/7 Profesor: Matias Jauregui Lorda Obra: La divina comedia Autor: Dante Alighieri"
+    "Directora/Artista/Programadora/Alumna: Ailen Avanzini \n Legajo: 94717/7 \n Profesor: Matias Jauregui Lorda \n Obra: La divina comedia \n  Autor: Dante Alighieri"
   };
 
   // Ajustar el tamaño y espaciado del texto para que se ajuste a la pantalla
@@ -146,15 +150,16 @@ void draw() {
 
   // Dibujar rectángulo negro con transparencia
   fill(0, 100); // Color negro con opacidad de 100
-  rect(0, 0, 600, 600);
+  rectMode(CORNER);
+  rect(0, 0, width, height);
 
   // Mostrar título de la pantalla actual
-  fill(255);
+  fill(colorTitulo);
   textSize(30);
   text(titulosPantallas[pantallaActual], width / 2, 50);
 
   // Mostrar texto narrativo
-  fill(255);
+  fill(colorTexto);
   textSize(20);
   text(textosNarrativos[pantallaActual], width / 2, height / 2 - 50);
 
@@ -249,6 +254,16 @@ void mostrarBotones() {
     }
 
     text(textoBoton, x, y);
+  }
+}
+
+void keyPressed() {
+  if (key == 'b' || key == 'B') {
+    colorTexto = color(255);
+    colorTitulo = color(255);
+  } else {
+    colorTexto = color(random(255), random(255), random(255));
+    colorTitulo = color(random(255), random(255), random(255));
   }
 }
 
