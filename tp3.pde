@@ -1,3 +1,4 @@
+
 // Alumna: Ailen Avanzini // Legajo: 94717/7 // Materia: Tecno Multimedia 1 // TP3 // Profesor: Matias Jauregui Lorda // FDA // UNLP
 //Link Tutorial: https://www.youtube.com/watch?v=Mqmj5nXb_pc
 
@@ -61,9 +62,9 @@ void cargarTextos(int anchoPantalla, int altoPantalla, int tamanoTexto, int espa
     "Pantalla 10: Final 3: La Felicidad",
     "Pantalla 11: Regreso al hogar",
     "P12: Desafios en \n los 9 Circulos del Averno",
-    "P13: Final 4; \n Original Pelicula: Perdon y Redencion",
-    "Pantalla 14: Final 5:\n El nuevo Rey del Inframundo",
-    "Pantalla 15: Final 6: \n Intercambio",
+    "P13: Final 4; \n El nuevo Rey del Inframundo",
+    "Pantalla 14: Final 5:\n Intercambio",
+    "Pantalla 15: Final 6: \n Original Pelicula: Perdon y Redencion",
     "Pantalla 16: Créditos"
   };
 
@@ -74,7 +75,7 @@ void cargarTextos(int anchoPantalla, int altoPantalla, int tamanoTexto, int espa
     "Dante y Virgilio descienden a través de los nueve círculos del Infierno. En cada círculo, encuentran a almas condenadas que sufren tormentos relacionados con sus pecados. Presencian horrores como el fuego, el hielo, los ríos de sangre y encuentran a personajes históricos y mitológicos, como Ulises y Cleopatra. \n *Si decide seguir el hilo del Libro ir a pantalla 4 \n *Si decide seguir el hilo de la pelicula ir a pantalla 12",
     "Dante y Virgilio emergen del Infierno y llegan al Purgatorio, una montaña con siete terrazas. Aquí, las almas se purifican a través de pruebas y sufrimientos relacionados con sus pecados. Cada terraza representa un pecado capital y Dante encuentra a personas arrepentidas a medida que avanza y enfrenta desafios cada vez mas dificiles, se purifica y aprende sobre la importancia del perdón y la penitencia en su camino a la redencion.",
     "Dante asciende a través de los nueve cielos del Paraíso. Cada cielo representa un nivel de felicidad y conocimiento celestial. En cada uno, encuentra a almas santas y recibe enseñanzas sobre la naturaleza divina, la teología y la perfección celestial. Dante es guiado por Beatriz, quien representa el amor divino y le revela la belleza y la armonía del Paraíso.",
-    "En el último cielo, Dante experimenta la visión beatífica y alcanza la unión con Dios. Experimenta la plenitud de la felicidad divina y comprende la perfección y el orden del universo. Su viaje culmina en una experiencia mística y trascendental, donde se funde con el amor y la sabiduría divina.",
+    "En el último cielo, Dante experimenta la visión beatífica y alcanza la unión con Dios. Experimenta la plenitud de la felicidad divina y comprende la perfección y el orden del universo. Su viaje culmina volviendo al mundo mortal luego de una experiencia mística y trascendental, donde se funde con el amor y la sabiduría divina.",
     "Dante Debe ir a la guerra por lo que su esposa Beatriz se queda sola en casa con su padre y: \n *Si decide hacer un pacto con el diablo ir a la pantalla 9 \n *Si decide solo esperarlo ir a la pantalla 8",
     "Al Beatriz no hacer el pacto con el diablo el regreso y el alma de Dante no tienen un seguro por lo que muere en batalla junto con otros cruzados",
     "Dante y su ejercito vencen y capturan presos. A Dante se le da la oportunidad de fornicar con una de las reclusas que tenian como esclava ya que esta pidio complacer a los soldados a cambio de su libertad. Ante esto Dante: \n *Si decide serle fiel a su esposa ir a la pantalla 10 \n *Si decide ser infiel ir a la pantalla 11",
