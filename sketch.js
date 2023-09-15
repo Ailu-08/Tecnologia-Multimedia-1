@@ -79,43 +79,41 @@ let collectedCoins = 0; // Cantidad de monedas recolectadas
 let lives
 
 function preload() {
-  
-   // Carga imágenes de Rubbish
+  // Carga imágenes de Rubbish
   for (let i = 1; i <= 10; i++) {
-    rubbishImages.push(loadImage("Rubbish " + i + ".png"));
+    rubbishImages.push(loadImage('assets/Rubbish ' + i + '.png'));
   }
-  
- // Carga imágenes de comida
+
+  // Carga imágenes de comida
   for (let i = 1; i <= 13; i++) {
-    foodImages.push(loadImage(`Food ${i}.png`));
+    foodImages.push(loadImage('assets/Food ' + i + '.png'));
   }
-  
+
   for (let i = 0; i < totalPictures; i++) {
-    Pictures.push(loadImage("Picture (" + (i + 1) + ").png"));
+    Pictures.push(loadImage('assets/Picture (' + (i + 1) + ').png'));
   }
 
   for (let i = 0; i < 10; i++) {
     rainbowColors.push(color(random(255), random(255), random(255)));
   }
 
-  burgerImage = loadImage('Burgi Game .png');
-  heartImage = loadImage("Lives -1.png");
-  CoinImage = loadImage('Coin  (4).png');
-  chefImage = loadImage('Chef (2).png');
-  InstructionsImage = loadImage('Crazy Burger .png');
-  PerdisteImage = loadImage('Burgi Raw .png');
-  GanasteImage = loadImage('Burgi Won .png');
-  GameImage = loadImage('Fondo CB .jpg');
-  TimeImage = loadImage('Time .png');
-  BurgiIntroImage = loadImage('Burgi Intro -1.png');
-  HouseImage = loadImage('House -1.png');
- jumpImage = loadImage('Burgi Jump -1.png');
- smallJumpImage = loadImage('Burgi Small Jump -1.png');
-  
-  for (let i = 0; i < totalCreditImages; i++) {
-    creditImages.push(loadImage("Imagen (" + (i + 1) + ").png"));
-  } }
+  burgerImage = loadImage('assets/Burgi Game.png');
+  heartImage = loadImage('assets/Lives -1.png');
+  CoinImage = loadImage('assets/Coin (4).png');
+  chefImage = loadImage('assets/Chef (2).png');
+  InstructionsImage = loadImage('assets/Crazy Burger.png');
+  PerdisteImage = loadImage('assets/Burgi Raw.png');
+  GanasteImage = loadImage('assets/Burgi Won.png');
+  GameImage = loadImage('assets/Fondo CB.jpg');
+  TimeImage = loadImage('assets/Time.png');
+  BurgiIntroImage = loadImage('assets/Burgi Intro -1.png');
+  HouseImage = loadImage('assets/House -1.png');
+  jumpImage = loadImage('assets/Burgi Jump -1.png');
+  smallJumpImage = loadImage('assets/Burgi Small Jump -1.png');
 
+  for (let i = 0; i < totalCreditImages; i++) {
+    creditImages.push(loadImage('assets/Imagen (' + (i + 1) + ').png'));
+  }}
 
 function setup() {
   createCanvas(600, 500); // Tamaño de la pantalla 
